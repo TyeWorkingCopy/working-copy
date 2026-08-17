@@ -22,6 +22,10 @@
 
   <style>
 
+    /* =========================
+       BASE
+    ========================= */
+
     :root {
       --bg: #f3f1eb;
       --text: #111111;
@@ -42,8 +46,11 @@
     body {
       background: var(--bg);
       color: var(--text);
+
       font-family: "Instrument Sans", Arial, sans-serif;
+
       padding: 18px;
+
       overflow-x: hidden;
     }
 
@@ -51,6 +58,11 @@
       color: inherit;
       text-decoration: none;
     }
+
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: sticky;
@@ -64,6 +76,7 @@
       padding: 8px 0 14px;
 
       background: var(--bg);
+
       border-bottom: 1px solid var(--line);
 
       font-size: 13px;
@@ -88,47 +101,81 @@
       opacity: 0.45;
     }
 
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       min-height: 88vh;
+
       display: grid;
       grid-template-rows: 1fr auto;
+
       padding: 24px 0 20px;
+
+      border-top: 0;
     }
 
     .hero-title {
       align-self: center;
 
-      display: block;
+      display: flex;
+      flex-direction: column;
+
       width: 100%;
 
       font-size: clamp(82px, 14vw, 220px);
       font-weight: 600;
+
       line-height: 0.76;
       letter-spacing: -0.08em;
 
       text-transform: uppercase;
     }
 
+    /*
+      LINE 1
+      WORKING = LEFT
+    */
+
     .hero-working {
       display: block;
+
       width: 100%;
-      text-align: right;
+
+      text-align: left;
+
       white-space: nowrap;
     }
+
+    /*
+      LINE 2
+      COPY = RIGHT
+    */
 
     .hero-copy {
       display: block;
+
       width: 100%;
-      text-align: left;
+
+      text-align: right;
+
       white-space: nowrap;
     }
 
+
+    /* HERO INFORMATION */
+
     .hero-bottom {
       display: grid;
+
       grid-template-columns: 1.3fr 1fr 1.2fr;
+
       gap: 20px;
 
       padding-top: 18px;
+
       border-top: 1px solid var(--line);
 
       font-size: 13px;
@@ -139,18 +186,21 @@
       margin-bottom: 5px;
 
       font-family: "IBM Plex Mono", monospace;
+
       font-size: 10px;
 
       text-transform: uppercase;
     }
 
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
     section {
       padding: 64px 0;
-      border-top: 1px solid var(--line);
-    }
 
-    .hero {
-      border-top: 0;
+      border-top: 1px solid var(--line);
     }
 
     .section-head {
@@ -161,19 +211,28 @@
       margin-bottom: 28px;
 
       font-family: "IBM Plex Mono", monospace;
+
       font-size: 12px;
 
       text-transform: uppercase;
+
       letter-spacing: -0.02em;
     }
 
+
+    /* =========================
+       SELECTED WORK
+    ========================= */
+
     .work-grid {
       display: grid;
+
       gap: 56px;
     }
 
     .project {
       display: grid;
+
       gap: 14px;
     }
 
@@ -181,6 +240,7 @@
       position: relative;
 
       width: 100%;
+
       height: 70vh;
       min-height: 420px;
 
@@ -195,11 +255,13 @@
 
     .project:hover .project-media {
       transform: scale(0.995);
+
       background: #d3cfc5;
     }
 
     .project-placeholder {
       position: absolute;
+
       inset: 0;
 
       display: flex;
@@ -207,7 +269,9 @@
       justify-content: center;
 
       font-size: clamp(28px, 5vw, 72px);
+
       letter-spacing: -0.04em;
+
       text-transform: uppercase;
 
       opacity: 0.3;
@@ -215,15 +279,24 @@
 
     .project-meta {
       display: grid;
+
       grid-template-columns: 1fr 1fr auto;
+
       gap: 20px;
 
       font-family: "IBM Plex Mono", monospace;
+
       font-size: 12px;
 
       text-transform: uppercase;
+
       letter-spacing: -0.02em;
     }
+
+
+    /* =========================
+       SERVICES
+    ========================= */
 
     .services-list {
       display: grid;
@@ -231,12 +304,15 @@
 
     .service-row {
       display: grid;
+
       grid-template-columns: 42px 1fr auto;
+
       gap: 20px;
 
       align-items: center;
 
       padding: 18px 0;
+
       border-top: 1px solid var(--line);
     }
 
@@ -246,12 +322,15 @@
 
     .service-row > span {
       font-family: "IBM Plex Mono", monospace;
+
       font-size: 11px;
     }
 
     .service-name {
       font-size: clamp(30px, 6vw, 88px);
+
       line-height: 0.95;
+
       letter-spacing: -0.05em;
     }
 
@@ -259,20 +338,30 @@
       max-width: 320px;
 
       font-size: 13px;
+
       line-height: 1.35;
 
       text-align: right;
     }
 
+
+    /* =========================
+       ABOUT
+    ========================= */
+
     .about-grid {
       display: grid;
+
       grid-template-columns: 1fr 2fr;
+
       gap: 32px;
     }
 
     .about-label {
       font-family: "IBM Plex Mono", monospace;
+
       font-size: 12px;
+
       text-transform: uppercase;
     }
 
@@ -280,23 +369,34 @@
       max-width: 1200px;
 
       font-size: clamp(30px, 4.8vw, 72px);
+
       line-height: 1.02;
+
       letter-spacing: -0.045em;
     }
 
     .about-small {
       max-width: 560px;
+
       margin-top: 34px;
 
       font-size: 14px;
+
       line-height: 1.45;
     }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
       min-height: 72vh;
 
       display: flex;
+
       flex-direction: column;
+
       justify-content: space-between;
     }
 
@@ -304,8 +404,11 @@
       max-width: 1400px;
 
       font-size: clamp(66px, 12vw, 190px);
+
       font-weight: 600;
+
       line-height: 0.82;
+
       letter-spacing: -0.07em;
 
       text-transform: uppercase;
@@ -313,13 +416,17 @@
 
     .contact-bottom {
       display: flex;
+
       justify-content: space-between;
+
       align-items: end;
+
       gap: 20px;
     }
 
     .contact-email {
       font-size: clamp(24px, 4vw, 60px);
+
       letter-spacing: -0.04em;
 
       transition: opacity 0.2s ease;
@@ -335,26 +442,43 @@
       font-size: 12px;
 
       text-transform: uppercase;
+
       text-align: right;
     }
 
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       display: grid;
+
       grid-template-columns: 1fr 1fr 1fr;
+
       gap: 20px;
 
       padding: 14px 0 4px;
+
       border-top: 1px solid var(--line);
 
       font-family: "IBM Plex Mono", monospace;
+
       font-size: 11px;
 
       text-transform: uppercase;
+
       letter-spacing: -0.02em;
     }
 
+
+    /* =========================
+       SCROLL ANIMATIONS
+    ========================= */
+
     .fade {
       opacity: 0;
+
       transform: translateY(18px);
 
       transition:
@@ -364,14 +488,23 @@
 
     .fade.visible {
       opacity: 1;
+
       transform: translateY(0);
     }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 850px) {
 
       body {
         padding: 14px;
       }
+
+
+      /* HEADER */
 
       header {
         font-size: 11px;
@@ -381,42 +514,63 @@
         gap: 10px;
       }
 
+
+      /* HERO */
+
       .hero {
         min-height: 78vh;
+
         padding-top: 20px;
       }
 
       .hero-title {
         font-size: clamp(64px, 21vw, 130px);
+
         line-height: 0.79;
       }
 
       .hero-working {
-        text-align: right;
+        width: 100%;
+
+        text-align: left;
       }
 
       .hero-copy {
-        text-align: left;
+        width: 100%;
+
+        text-align: right;
       }
 
       .hero-bottom {
         grid-template-columns: 1fr;
+
         gap: 14px;
       }
+
+
+      /* GENERAL */
 
       section {
         padding: 50px 0;
       }
 
+
+      /* WORK */
+
       .project-media {
         height: 52vh;
+
         min-height: 320px;
       }
 
       .project-meta {
         grid-template-columns: 1fr;
+
         gap: 4px;
       }
+
+
+      /* SERVICES */
 
       .service-row {
         grid-template-columns: 28px 1fr;
@@ -424,13 +578,21 @@
 
       .service-note {
         grid-column: 2;
+
         max-width: none;
+
         text-align: left;
       }
+
+
+      /* ABOUT */
 
       .about-grid {
         grid-template-columns: 1fr;
       }
+
+
+      /* CONTACT */
 
       .contact {
         min-height: 60vh;
@@ -438,6 +600,7 @@
 
       .contact-bottom {
         flex-direction: column;
+
         align-items: flex-start;
       }
 
@@ -445,8 +608,12 @@
         text-align: left;
       }
 
+
+      /* FOOTER */
+
       footer {
         grid-template-columns: 1fr;
+
         gap: 6px;
       }
 
@@ -456,7 +623,11 @@
 
 </head>
 
+
 <body>
+
+
+  <!-- HEADER -->
 
   <header>
 
@@ -465,117 +636,238 @@
     </div>
 
     <nav>
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+
+      <a href="#work">
+        Work
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
     </nav>
 
   </header>
 
+
   <main>
+
+
+    <!-- ======================
+         HERO
+    ======================= -->
 
     <section class="hero">
 
       <h1 class="hero-title">
-        <span class="hero-working">Working</span>
-        <span class="hero-copy">Copy</span>
+
+        <span class="hero-working">
+          Working
+        </span>
+
+        <span class="hero-copy">
+          Copy
+        </span>
+
       </h1>
+
 
       <div class="hero-bottom">
 
         <div>
-          <div class="label">Studio</div>
+
+          <div class="label">
+            Studio
+          </div>
+
           Independent graphic design studio.
+
         </div>
 
+
         <div>
-          <div class="label">Based</div>
+
+          <div class="label">
+            Based
+          </div>
+
           Folkestone, UK
+
         </div>
 
+
         <div>
-          <div class="label">Working across</div>
+
+          <div class="label">
+            Working across
+          </div>
+
           Identities, campaigns, events and visual communication.
+
         </div>
 
       </div>
 
     </section>
+
+
+    <!-- ======================
+         WORK
+    ======================= -->
 
     <section id="work">
 
       <div class="section-head">
-        <span>Selected Work</span>
-        <span>01—03</span>
+
+        <span>
+          Selected Work
+        </span>
+
+        <span>
+          01—03
+        </span>
+
       </div>
+
 
       <div class="work-grid">
 
+
+        <!-- PROJECT 01 -->
+
         <article class="project fade">
 
           <div class="project-media">
+
             <div class="project-placeholder">
               Project 01
             </div>
+
           </div>
 
           <div class="project-meta">
-            <span>Project Name</span>
-            <span>Brand Identity</span>
-            <span>2026</span>
+
+            <span>
+              Project Name
+            </span>
+
+            <span>
+              Brand Identity
+            </span>
+
+            <span>
+              2026
+            </span>
+
           </div>
 
         </article>
 
+
+        <!-- PROJECT 02 -->
+
         <article class="project fade">
 
           <div class="project-media">
+
             <div class="project-placeholder">
               Project 02
             </div>
+
           </div>
 
           <div class="project-meta">
-            <span>Project Name</span>
-            <span>Campaign / Event</span>
-            <span>2026</span>
+
+            <span>
+              Project Name
+            </span>
+
+            <span>
+              Campaign / Event
+            </span>
+
+            <span>
+              2026
+            </span>
+
           </div>
 
         </article>
+
+
+        <!-- PROJECT 03 -->
 
         <article class="project fade">
 
           <div class="project-media">
+
             <div class="project-placeholder">
               Project 03
             </div>
+
           </div>
 
           <div class="project-meta">
-            <span>Project Name</span>
-            <span>Graphic Design</span>
-            <span>2026</span>
+
+            <span>
+              Project Name
+            </span>
+
+            <span>
+              Graphic Design
+            </span>
+
+            <span>
+              2026
+            </span>
+
           </div>
 
         </article>
+
 
       </div>
 
     </section>
 
+
+    <!-- ======================
+         SERVICES
+    ======================= -->
+
     <section id="services">
 
       <div class="section-head">
-        <span>Services</span>
-        <span>What we do</span>
+
+        <span>
+          Services
+        </span>
+
+        <span>
+          What we do
+        </span>
+
       </div>
+
 
       <div class="services-list">
 
+
+        <!-- SERVICE 01 -->
+
         <div class="service-row fade">
 
-          <span>01</span>
+          <span>
+            01
+          </span>
 
           <div class="service-name">
             Brand Identity
@@ -587,9 +879,14 @@
 
         </div>
 
+
+        <!-- SERVICE 02 -->
+
         <div class="service-row fade">
 
-          <span>02</span>
+          <span>
+            02
+          </span>
 
           <div class="service-name">
             Campaigns & Events
@@ -601,9 +898,14 @@
 
         </div>
 
+
+        <!-- SERVICE 03 -->
+
         <div class="service-row fade">
 
-          <span>03</span>
+          <span>
+            03
+          </span>
 
           <div class="service-name">
             Design Partnerships
@@ -615,17 +917,25 @@
 
         </div>
 
+
       </div>
 
     </section>
+
+
+    <!-- ======================
+         ABOUT
+    ======================= -->
 
     <section id="about">
 
       <div class="about-grid">
 
+
         <div class="about-label">
           About
         </div>
+
 
         <div>
 
@@ -633,25 +943,40 @@
             Working Copy creates visual identities, campaigns and graphic systems for businesses, organisations and events.
           </p>
 
+
           <p class="about-small fade">
             Independent, responsive and built around direct collaboration.
-            Projects are approached with clarity, strong visual thinking and a focus on work that actually gets used.
+            Projects are approached with clarity, strong visual thinking and
+            a focus on work that actually gets used.
           </p>
 
         </div>
+
 
       </div>
 
     </section>
 
-    <section id="contact" class="contact">
+
+    <!-- ======================
+         CONTACT
+    ======================= -->
+
+    <section
+      id="contact"
+      class="contact"
+    >
 
       <h2 class="contact-title fade">
+
         Have a project<br>
         in mind?
+
       </h2>
 
+
       <div class="contact-bottom">
+
 
         <a
           class="contact-email"
@@ -660,16 +985,27 @@
           hello@workingcopy.studio ↗
         </a>
 
+
         <div class="contact-note">
+
           New enquiries welcome<br>
+
           Folkestone, UK
+
         </div>
+
 
       </div>
 
     </section>
 
+
   </main>
+
+
+  <!-- ======================
+       FOOTER
+  ======================= -->
 
   <footer>
 
@@ -687,32 +1023,47 @@
 
   </footer>
 
+
+  <!-- ======================
+       JAVASCRIPT
+  ======================= -->
+
   <script>
 
     const items = document.querySelectorAll(".fade");
 
+
     const observer = new IntersectionObserver(
+
       entries => {
 
         entries.forEach(entry => {
 
           if (entry.isIntersecting) {
+
             entry.target.classList.add("visible");
+
           }
 
         });
 
       },
+
       {
         threshold: 0.12
       }
+
     );
 
+
     items.forEach(item => {
+
       observer.observe(item);
+
     });
 
   </script>
+
 
 </body>
 
