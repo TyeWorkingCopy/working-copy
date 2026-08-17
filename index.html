@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Working Copy — Independent Graphic Design Studio</title>
 
   <meta
     name="description"
     content="Working Copy is an independent graphic design studio creating identities, campaigns and visual communications."
-  />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap"
+    rel="stylesheet"
+  >
+
   <style>
     :root {
       --bg: #f3f1eb;
@@ -68,44 +74,44 @@
       gap: 20px;
     }
 
-   .hero {
-  min-height: 84vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  padding: 22px 0 20px;
-}
+    .hero {
+      min-height: 84vh;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      padding: 22px 0 20px;
+    }
 
-.hero-title {
-  align-self: center;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 18px;
-  font-size: clamp(76px, 14vw, 220px);
-  line-height: 0.78;
-  letter-spacing: -0.075em;
-  font-weight: 600;
-  text-transform: uppercase;
-}
+    .hero-title {
+      align-self: center;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      font-size: clamp(76px, 14vw, 220px);
+      line-height: 0.78;
+      letter-spacing: -0.075em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
 
-.hero-title span:last-child {
-  text-align: right;
-}
+    .hero-title span:last-child {
+      text-align: right;
+    }
 
-.hero-bottom {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1.2fr;
-  gap: 20px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-  font-size: 13px;
-  line-height: 1.4;
-}
+    .hero-bottom {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1.2fr;
+      gap: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      line-height: 1.4;
+    }
 
-.hero-bottom .label {
-  text-transform: uppercase;
-  font-size: 10px;
-  margin-bottom: 5px;
-}
+    .hero-bottom .label {
+      text-transform: uppercase;
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
 
     section {
       border-top: 1px solid var(--line);
@@ -263,6 +269,16 @@
       text-transform: uppercase;
     }
 
+    .section-head,
+    .project-meta,
+    .about-label,
+    .contact-note,
+    footer,
+    .hero-bottom .label {
+      font-family: "IBM Plex Mono", monospace;
+      letter-spacing: -0.02em;
+    }
+
     .fade {
       opacity: 0;
       transform: translateY(18px);
@@ -273,15 +289,7 @@
       opacity: 1;
       transform: translateY(0);
     }
-.section-head,
-.project-meta,
-.about-label,
-.contact-note,
-footer,
-.hero-bottom .label {
-  font-family: "IBM Plex Mono", monospace;
-  letter-spacing: -0.02em;
-}
+
     @media (max-width: 850px) {
       body {
         padding: 14px;
@@ -294,15 +302,29 @@ footer,
 
       .hero {
         min-height: 72vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
       }
-.hero-title {
-  grid-template-columns: 1fr;
-  gap: 0;
-}
 
-.hero-title span:last-child {
-  text-align: left;
-}
+      .hero-title {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        font-size: clamp(64px, 20vw, 120px);
+        line-height: 0.8;
+        letter-spacing: -0.07em;
+      }
+
+      .hero-title span {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+
+      .hero-title span:last-child {
+        text-align: left;
+      }
+
       .hero-bottom {
         grid-template-columns: 1fr;
         gap: 14px;
@@ -365,10 +387,10 @@ footer,
   <main>
 
     <section class="hero">
-     <h1 class="hero-title">
-  <span>Working</span>
-  <span>Copy</span>
-</h1>
+      <h1 class="hero-title">
+        <span>Working</span>
+        <span>Copy</span>
+      </h1>
 
       <div class="hero-bottom">
         <div>
