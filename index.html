@@ -10,7 +10,9 @@
     name="description"
     content="Working Copy is an independent graphic design studio creating identities, campaigns and visual communications."
   />
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f3f1eb;
@@ -32,7 +34,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Instrument Sans", Arial, sans-serif;
       padding: 18px;
       overflow-x: hidden;
     }
@@ -264,7 +266,15 @@
       opacity: 1;
       transform: translateY(0);
     }
-
+.section-head,
+.project-meta,
+.about-label,
+.contact-note,
+footer,
+.hero-bottom .label {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: -0.02em;
+}
     @media (max-width: 850px) {
       body {
         padding: 14px;
