@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Elijah Hazelwood Racing — Working Copy</title>
+
+  <meta
+    name="description"
+    content="Ongoing social media design for karting driver Elijah Hazelwood."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://use.typekit.net/tfl2fwg.css"
+  >
+
+  <style>
+
+    :root {
+      --bg: #f3f1eb;
+      --text: #111111;
+      --line: #b8b5ad;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Instrument Sans", Arial, sans-serif;
+      padding: 18px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 8px 0 14px;
+
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .brand {
+      font-family: "auger-mono", monospace;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .back {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+    }
+
+    .project-head {
+      padding: 70px 0 40px;
+    }
+
+    .project-title {
+      font-family: "auger-mono", monospace;
+      font-weight: 400;
+
+      font-size: clamp(58px, 10vw, 160px);
+      line-height: 0.84;
+      letter-spacing: -0.07em;
+
+      text-transform: uppercase;
+      max-width: 1400px;
+    }
+
+    .project-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 20px;
+
+      padding-top: 28px;
+      margin-top: 32px;
+
+      border-top: 1px solid var(--line);
+
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+
+      padding: 64px 0;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .intro-label {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .intro-copy {
+      max-width: 900px;
+
+      font-size: clamp(26px, 3.5vw, 54px);
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+    }
+
+    .image-block {
+      margin-bottom: 24px;
+    }
+
+    .image-block img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .two-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+
+      margin-bottom: 24px;
+    }
+
+    .two-up img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .next {
+      margin-top: 80px;
+      padding: 70px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .next-label {
+      margin-bottom: 20px;
+
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .next-title {
+      font-size: clamp(42px, 7vw, 100px);
+      letter-spacing: -0.05em;
+
+      transition: opacity 0.2s ease;
+    }
+
+    .next-title:hover {
+      opacity: 0.45;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 14px 0 4px;
+
+      border-top: 1px solid var(--line);
+
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 800px) {
+
+      body {
+        padding: 14px;
+      }
+
+      .project-meta {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .two-up {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+      W/C
+    </a>
+
+    <a
+      class="back"
+      href="index.html#work"
+    >
+      ← Back to work
+    </a>
+
+  </header>
+
+  <main>
+
+    <section class="project-head">
+
+      <h1 class="project-title">
+        Elijah Hazelwood<br>
+        Racing
+      </h1>
+
+      <div class="project-meta">
+
+        <span>
+          Social Media
+        </span>
+
+        <span>
+          Karting
+        </span>
+
+        <span>
+          2024–Present
+        </span>
+
+      </div>
+
+    </section>
+
+    <section class="intro">
+
+      <div class="intro-label">
+        Project
+      </div>
+
+      <p class="intro-copy">
+        Ongoing social media design for karting driver Elijah Hazelwood,
+        creating race-weekend graphics, event announcements and sponsor-led
+        content across the racing calendar.
+      </p>
+
+    </section>
+
+    <!-- HERO -->
+
+    <div class="image-block">
+
+      <img
+        src="elijah-hazelwood/elijah-hazelwood-hero.jpg"
+        alt="Elijah Hazelwood karting helmet"
+      >
+
+    </div>
+
+    <!-- PFI -->
+
+    <div class="image-block">
+
+      <img
+        src="elijah-hazelwood/elijah-hazelwood-pfi.jpg"
+        alt="Elijah Hazelwood PFI karting social graphic"
+      >
+
+    </div>
+
+    <!-- WARDEN LAW + RACE DAY -->
+
+    <div class="two-up">
+
+      <img
+        src="elijah-hazelwood/elijah-hazelwood-warden-law.jpg"
+        alt="Elijah Hazelwood Warden Law social graphic"
+      >
+
+      <img
+        src="elijah-hazelwood/elijah-hazelwood-race-day.jpg"
+        alt="Elijah Hazelwood race day graphic"
+      >
+
+    </div>
+
+    <!-- RUN4YOURMIND -->
+
+    <div class="image-block">
+
+      <img
+        src="elijah-hazelwood/elijah-hazelwood-r4ym.jpg"
+        alt="Elijah Hazelwood Run4YourMind social post"
+      >
+
+    </div>
+
+    <section class="next">
+
+      <div class="next-label">
+        Next Project
+      </div>
+
+      <a
+        class="next-title"
+        href="slater-lucey.html"
+      >
+        Slater &amp; Lucey →
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <span>
+      Working Copy © 2026
+    </span>
+
+    <span>
+      workingcopy.studio
+    </span>
+
+  </footer>
+
+</body>
+
+</html>
