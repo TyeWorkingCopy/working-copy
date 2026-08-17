@@ -27,6 +27,7 @@
       --text: #111111;
       --line: #b8b5ad;
       --panel: #ddd9d0;
+      --service-hover: #e9e6de;
     }
 
     * {
@@ -51,6 +52,8 @@
       color: inherit;
       text-decoration: none;
     }
+
+    /* HEADER */
 
     header {
       position: sticky;
@@ -81,12 +84,37 @@
     }
 
     nav a {
-      transition: opacity 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+
+      transition:
+        gap 0.25s ease,
+        opacity 0.2s ease;
+    }
+
+    nav a::after {
+      content: "↗";
+      display: inline-block;
+
+      opacity: 0;
+      transform: translate(-4px, 4px);
+
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
     }
 
     nav a:hover {
-      opacity: 0.45;
+      gap: 5px;
     }
+
+    nav a:hover::after {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    /* HERO */
 
     .hero {
       min-height: 88vh;
@@ -121,6 +149,12 @@
       width: 100%;
       text-align: left;
       white-space: nowrap;
+
+      opacity: 0;
+      transform: translateX(-55px);
+
+      animation: heroWorkingIn 0.85s cubic-bezier(.22,.75,.25,1) forwards;
+      animation-delay: 0.1s;
     }
 
     .hero-copy {
@@ -128,6 +162,26 @@
       width: 100%;
       text-align: right;
       white-space: nowrap;
+
+      opacity: 0;
+      transform: translateX(55px);
+
+      animation: heroCopyIn 0.85s cubic-bezier(.22,.75,.25,1) forwards;
+      animation-delay: 0.18s;
+    }
+
+    @keyframes heroWorkingIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes heroCopyIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     .hero-bottom {
@@ -151,6 +205,8 @@
       text-transform: uppercase;
     }
 
+    /* GENERAL */
+
     section {
       padding: 64px 0;
       border-top: 1px solid var(--line);
@@ -169,6 +225,8 @@
       text-transform: uppercase;
       letter-spacing: -0.02em;
     }
+
+    /* WORK */
 
     .work-grid {
       display: grid;
@@ -228,6 +286,52 @@
       letter-spacing: -0.02em;
     }
 
+    /* CUSTOM PROJECT CURSOR */
+
+    .view-cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+
+      width: 74px;
+      height: 74px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--text);
+      color: var(--bg);
+
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      pointer-events: none;
+
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.7);
+
+      transition:
+        opacity 0.18s ease,
+        transform 0.18s ease;
+    }
+
+    .view-cursor.visible {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .project-media.cursor-active {
+      cursor: none;
+    }
+
+    /* SERVICES */
+
     .services-list {
       display: grid;
     }
@@ -239,12 +343,24 @@
 
       align-items: center;
 
-      padding: 18px 0;
+      padding: 18px 12px;
+
       border-top: 1px solid var(--line);
+
+      transition:
+        background 0.3s ease,
+        padding-left 0.3s ease,
+        padding-right 0.3s ease;
     }
 
     .service-row:last-child {
       border-bottom: 1px solid var(--line);
+    }
+
+    .service-row:hover {
+      background: var(--service-hover);
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .service-row > span {
@@ -256,6 +372,12 @@
       font-size: clamp(30px, 6vw, 88px);
       line-height: 0.95;
       letter-spacing: -0.05em;
+
+      transition: transform 0.3s ease;
+    }
+
+    .service-row:hover .service-name {
+      transform: translateX(10px);
     }
 
     .service-note {
@@ -266,6 +388,8 @@
 
       text-align: right;
     }
+
+    /* ABOUT */
 
     .about-grid {
       display: grid;
@@ -295,6 +419,8 @@
       line-height: 1.45;
     }
 
+    /* CONTACT */
+
     .contact {
       min-height: 72vh;
 
@@ -322,6 +448,9 @@
     }
 
     .contact-email {
+      display: inline-flex;
+      align-items: center;
+
       font-size: clamp(24px, 4vw, 60px);
       letter-spacing: -0.04em;
 
@@ -332,6 +461,41 @@
       opacity: 0.45;
     }
 
+    /* CSS-DRAWN EMAIL ARROW */
+
+    .email-arrow {
+      display: inline-block;
+
+      width: 0.52em;
+      height: 0.52em;
+
+      margin-left: 0.16em;
+
+      position: relative;
+
+      vertical-align: 0.05em;
+
+      border-top: 0.055em solid currentColor;
+      border-right: 0.055em solid currentColor;
+    }
+
+    .email-arrow::after {
+      content: "";
+
+      position: absolute;
+
+      width: 0.70em;
+      height: 0.055em;
+
+      background: currentColor;
+
+      top: 0.18em;
+      right: -0.08em;
+
+      transform: rotate(-45deg);
+      transform-origin: right center;
+    }
+
     .contact-note {
       font-family: "IBM Plex Mono", monospace;
 
@@ -340,6 +504,8 @@
       text-transform: uppercase;
       text-align: right;
     }
+
+    /* FOOTER */
 
     footer {
       display: grid;
@@ -356,6 +522,8 @@
       letter-spacing: -0.02em;
     }
 
+    /* SCROLL */
+
     .fade {
       opacity: 0;
       transform: translateY(18px);
@@ -370,6 +538,8 @@
       transform: translateY(0);
     }
 
+    /* MOBILE */
+
     @media (max-width: 850px) {
 
       body {
@@ -382,6 +552,10 @@
 
       nav {
         gap: 10px;
+      }
+
+      nav a::after {
+        display: none;
       }
 
       .hero {
@@ -423,8 +597,28 @@
         gap: 4px;
       }
 
+      .view-cursor {
+        display: none;
+      }
+
+      .project-media.cursor-active {
+        cursor: auto;
+      }
+
       .service-row {
         grid-template-columns: 28px 1fr;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .service-row:hover {
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .service-row:hover .service-name {
+        transform: none;
       }
 
       .service-note {
@@ -457,11 +651,28 @@
 
     }
 
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+    }
+
   </style>
 
 </head>
 
 <body>
+
+  <div class="view-cursor" id="viewCursor">
+    View
+  </div>
 
   <header>
 
@@ -663,7 +874,8 @@
           class="contact-email"
           href="mailto:hello@workingcopy.studio"
         >
-          hello@workingcopy.studio ↗
+          hello@workingcopy.studio
+          <span class="email-arrow"></span>
         </a>
 
         <div class="contact-note">
@@ -695,6 +907,8 @@
 
   <script>
 
+    /* SCROLL FADE */
+
     const items = document.querySelectorAll(".fade");
 
     const observer = new IntersectionObserver(
@@ -716,6 +930,39 @@
 
     items.forEach(item => {
       observer.observe(item);
+    });
+
+
+    /* PROJECT VIEW CURSOR */
+
+    const viewCursor = document.getElementById("viewCursor");
+    const projectMedia = document.querySelectorAll(".project-media");
+
+    projectMedia.forEach(project => {
+
+      project.addEventListener("mouseenter", () => {
+
+        if (window.innerWidth > 850) {
+          viewCursor.classList.add("visible");
+          project.classList.add("cursor-active");
+        }
+
+      });
+
+      project.addEventListener("mouseleave", () => {
+
+        viewCursor.classList.remove("visible");
+        project.classList.remove("cursor-active");
+
+      });
+
+      project.addEventListener("mousemove", event => {
+
+        viewCursor.style.left = `${event.clientX}px`;
+        viewCursor.style.top = `${event.clientY}px`;
+
+      });
+
     });
 
   </script>
