@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Folkestone Triennial — Working Copy</title>
+
+  <meta
+    name="description"
+    content="Folkestone Triennial 2025 — event design project by Working Copy."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://use.typekit.net/tfl2fwg.css"
+  >
+
+  <style>
+
+    :root {
+      --bg: #f3f1eb;
+      --text: #111111;
+      --line: #b8b5ad;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Instrument Sans", Arial, sans-serif;
+      padding: 18px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 8px 0 14px;
+
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .brand {
+      font-family: "auger-mono", monospace;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .back {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+    }
+
+    .project-head {
+      padding: 70px 0 40px;
+    }
+
+    .project-title {
+      font-family: "auger-mono", monospace;
+      font-weight: 400;
+      font-size: clamp(60px, 11vw, 170px);
+      line-height: 0.84;
+      letter-spacing: -0.07em;
+      text-transform: uppercase;
+      max-width: 1300px;
+    }
+
+    .project-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 20px;
+      padding-top: 28px;
+      margin-top: 32px;
+      border-top: 1px solid var(--line);
+
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+
+      padding: 64px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .intro-label {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .intro-copy {
+      max-width: 900px;
+      font-size: clamp(26px, 3.5vw, 54px);
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+    }
+
+    .image-block {
+      margin-bottom: 24px;
+    }
+
+    .image-block img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .two-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .two-up img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .next {
+      margin-top: 80px;
+      padding: 70px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .next-label {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .next-title {
+      font-size: clamp(42px, 7vw, 100px);
+      letter-spacing: -0.05em;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 14px 0 4px;
+
+      display: flex;
+      justify-content: space-between;
+
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 800px) {
+
+      body {
+        padding: 14px;
+      }
+
+      .project-meta {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .two-up {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <a class="brand" href="index.html">
+      W/C
+    </a>
+
+    <a class="back" href="index.html#work">
+      ← Back to work
+    </a>
+
+  </header>
+
+  <main>
+
+    <section class="project-head">
+
+      <h1 class="project-title">
+        Folkestone<br>
+        Triennial
+      </h1>
+
+      <div class="project-meta">
+
+        <span>Event</span>
+
+        <span>Folkestone, UK</span>
+
+        <span>2025</span>
+
+      </div>
+
+    </section>
+
+    <section class="intro">
+
+      <div class="intro-label">
+        Project
+      </div>
+
+      <p class="intro-copy">
+        A proposed visual identity and event system for Folkestone Triennial 2025,
+        developed around the theme “How Lies the Land?” and applied across print,
+        environmental graphics, merchandise and editorial design.
+      </p>
+
+    </section>
+
+    <div class="image-block">
+      <img
+        src="folkestone/folkestone-hero.jpg"
+        alt="Folkestone Triennial 2025 main visual"
+      >
+    </div>
+
+    <div class="image-block">
+      <img
+        src="folkestone/folkestone-poster.jpg"
+        alt="Folkestone Triennial poster"
+      >
+    </div>
+
+    <div class="image-block">
+      <img
+        src="folkestone/folkestone-programme.jpg"
+        alt="Folkestone Triennial programme design"
+      >
+    </div>
+
+    <div class="image-block">
+      <img
+        src="folkestone/folkestone-banners.jpg"
+        alt="Folkestone Triennial street banners"
+      >
+    </div>
+
+    <div class="two-up">
+
+      <img
+        src="folkestone/folkestone-tote.jpg"
+        alt="Folkestone Triennial tote bag"
+      >
+
+      <img
+        src="folkestone/folkestone-shirt.jpg"
+        alt="Folkestone Triennial T-shirt"
+      >
+
+    </div>
+
+    <section class="next">
+
+      <div class="next-label">
+        Next Project
+      </div>
+
+      <div class="next-title">
+        Coming Soon
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <span>Working Copy © 2026</span>
+
+    <span>workingcopy.studio</span>
+
+  </footer>
+
+</body>
+
+</html>
