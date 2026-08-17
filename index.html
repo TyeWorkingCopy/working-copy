@@ -16,14 +16,18 @@
   <meta name="theme-color" content="#f3f1eb">
 
   <meta property="og:title" content="Working Copy — Graphic Design Studio">
+
   <meta
     property="og:description"
     content="Independent graphic design studio creating identities, campaigns and visual communication."
   >
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://workingcopy.studio/">
 
   <link rel="canonical" href="https://workingcopy.studio/">
+
+  <!-- GOOGLE FONTS -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +36,14 @@
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
+
+  <!-- ADOBE FONTS — AUGER MONO -->
+
+  <link
+    rel="stylesheet"
+    href="https://use.typekit.net/tfl2fwg.css"
+  >
+
 
   <style>
 
@@ -43,8 +55,11 @@
 
       --bg: #f3f1eb;
       --text: #111111;
+
       --line: #b8b5ad;
+
       --panel: #ddd9d0;
+
       --hover: #e8e5dd;
 
       --page-padding: 18px;
@@ -57,22 +72,35 @@
     ========================================================= */
 
     * {
+
       margin: 0;
+
       padding: 0;
+
       box-sizing: border-box;
+
     }
 
+
     html {
+
       scroll-behavior: smooth;
+
       scroll-padding-top: 80px;
+
     }
+
 
     body {
 
       background: var(--bg);
+
       color: var(--text);
 
-      font-family: "Instrument Sans", Arial, sans-serif;
+      font-family:
+        "Instrument Sans",
+        Arial,
+        sans-serif;
 
       padding: var(--page-padding);
 
@@ -80,9 +108,13 @@
 
     }
 
+
     a {
+
       color: inherit;
+
       text-decoration: none;
+
     }
 
 
@@ -93,19 +125,28 @@
     header {
 
       position: sticky;
+
       top: 0;
 
       z-index: 100;
 
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
 
-      padding: 8px 0 14px;
+      padding:
+        8px
+        0
+        14px;
 
       background: var(--bg);
 
-      border-bottom: 1px solid var(--line);
+      border-bottom:
+        1px
+        solid
+        var(--line);
 
       font-size: 13px;
 
@@ -116,19 +157,36 @@
     }
 
 
+    /* W/C MARK */
+
     .brand {
+
+      font-family:
+        "auger-mono",
+        monospace;
 
       font-weight: 700;
 
-      cursor: pointer;
+      font-style: normal;
 
-      transition: opacity 0.2s ease;
+      font-size: 18px;
+
+      line-height: 1;
+
+      letter-spacing: -0.06em;
+
+      transition:
+        opacity
+        0.2s
+        ease;
 
     }
 
 
     .brand:hover {
-      opacity: 0.5;
+
+      opacity: 0.45;
+
     }
 
 
@@ -149,16 +207,17 @@
 
       align-items: center;
 
-      transition: opacity 0.2s ease;
-
     }
 
+
+    /* ACTIVE / HOVER DOT */
 
     nav a::after {
 
       content: "";
 
       width: 5px;
+
       height: 5px;
 
       margin-left: 0;
@@ -169,7 +228,8 @@
 
       opacity: 0;
 
-      transform: translateX(-3px);
+      transform:
+        translateX(-3px);
 
       transition:
         opacity 0.2s ease,
@@ -186,13 +246,16 @@
 
       margin-left: 6px;
 
-      transform: translateX(0);
+      transform:
+        translateX(0);
 
     }
 
 
     nav a.active {
+
       font-weight: 600;
+
     }
 
 
@@ -206,9 +269,14 @@
 
       display: grid;
 
-      grid-template-rows: 1fr auto;
+      grid-template-rows:
+        1fr
+        auto;
 
-      padding: 24px 0 20px;
+      padding:
+        24px
+        0
+        20px;
 
       border-top: 0;
 
@@ -225,9 +293,20 @@
 
       width: 100%;
 
-      font-size: clamp(82px, 14vw, 220px);
+      font-family:
+        "auger-mono",
+        monospace;
 
-      font-weight: 600;
+      font-weight: 400;
+
+      font-style: normal;
+
+      font-size:
+        clamp(
+          82px,
+          14vw,
+          220px
+        );
 
       line-height: 0.76;
 
@@ -239,6 +318,8 @@
 
     }
 
+
+    /* WORKING — LEFT */
 
     .hero-working {
 
@@ -252,7 +333,8 @@
 
       opacity: 0;
 
-      transform: translateX(-60px);
+      transform:
+        translateX(-60px);
 
       animation:
         workingIn
@@ -264,6 +346,8 @@
 
     }
 
+
+    /* COPY — RIGHT */
 
     .hero-copy {
 
@@ -277,7 +361,8 @@
 
       opacity: 0;
 
-      transform: translateX(60px);
+      transform:
+        translateX(60px);
 
       animation:
         copyIn
@@ -293,8 +378,12 @@
     @keyframes workingIn {
 
       to {
+
         opacity: 1;
-        transform: translateX(0);
+
+        transform:
+          translateX(0);
+
       }
 
     }
@@ -303,15 +392,20 @@
     @keyframes copyIn {
 
       to {
+
         opacity: 1;
-        transform: translateX(0);
+
+        transform:
+          translateX(0);
+
       }
 
     }
 
 
-    /* HERO INFORMATION */
-
+    /* =========================================================
+       HERO META
+    ========================================================= */
 
     .hero-bottom {
 
@@ -327,7 +421,10 @@
 
       padding-top: 18px;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px
+        solid
+        var(--line);
 
       font-size: 13px;
 
@@ -335,7 +432,8 @@
 
       opacity: 0;
 
-      transform: translateY(10px);
+      transform:
+        translateY(10px);
 
       animation:
         metadataIn
@@ -351,8 +449,12 @@
     @keyframes metadataIn {
 
       to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+          translateY(0);
+
       }
 
     }
@@ -362,16 +464,15 @@
 
       margin-bottom: 5px;
 
-      font-family: "IBM Plex Mono", monospace;
+      font-family:
+        "IBM Plex Mono",
+        monospace;
 
       font-size: 10px;
 
       text-transform: uppercase;
 
     }
-
-
-    /* STATUS */
 
 
     .status {
@@ -402,34 +503,46 @@
 
       background: var(--text);
 
-      animation: pulse 2.4s infinite;
+      animation:
+        pulse
+        2.4s
+        infinite;
 
     }
 
 
     @keyframes pulse {
 
-      0%, 100% {
+      0%,
+      100% {
+
         opacity: 1;
+
       }
 
       50% {
+
         opacity: 0.25;
+
       }
 
     }
 
 
     /* =========================================================
-       SECTIONS
+       GENERAL SECTIONS
     ========================================================= */
-
 
     section {
 
-      padding: 64px 0;
+      padding:
+        64px
+        0;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px
+        solid
+        var(--line);
 
     }
 
@@ -444,7 +557,9 @@
 
       margin-bottom: 28px;
 
-      font-family: "IBM Plex Mono", monospace;
+      font-family:
+        "IBM Plex Mono",
+        monospace;
 
       font-size: 12px;
 
@@ -458,7 +573,6 @@
     /* =========================================================
        WORK
     ========================================================= */
-
 
     .work-grid {
 
@@ -499,9 +613,11 @@
     }
 
 
-    .project:hover .project-media {
+    .project:hover
+    .project-media {
 
-      transform: scale(0.995);
+      transform:
+        scale(0.995);
 
       background: #d3cfc5;
 
@@ -520,13 +636,24 @@
 
       justify-content: center;
 
-      font-size: clamp(28px, 5vw, 72px);
+      font-family:
+        "auger-mono",
+        monospace;
+
+      font-weight: 400;
+
+      font-size:
+        clamp(
+          28px,
+          5vw,
+          72px
+        );
 
       letter-spacing: -0.04em;
 
       text-transform: uppercase;
 
-      opacity: 0.25;
+      opacity: 0.20;
 
     }
 
@@ -542,7 +669,9 @@
 
       gap: 20px;
 
-      font-family: "IBM Plex Mono", monospace;
+      font-family:
+        "IBM Plex Mono",
+        monospace;
 
       font-size: 12px;
 
@@ -554,25 +683,27 @@
 
 
     /* =========================================================
-       VIEW CURSOR
+       PROJECT VIEW CURSOR
     ========================================================= */
-
 
     .view-cursor {
 
       position: fixed;
 
       left: 0;
+
       top: 0;
 
       z-index: 1000;
 
       width: 72px;
+
       height: 72px;
 
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
       border-radius: 50%;
@@ -581,7 +712,9 @@
 
       color: var(--bg);
 
-      font-family: "IBM Plex Mono", monospace;
+      font-family:
+        "IBM Plex Mono",
+        monospace;
 
       font-size: 10px;
 
@@ -616,7 +749,9 @@
 
 
     .project-media.cursor-active {
+
       cursor: none;
+
     }
 
 
@@ -624,9 +759,10 @@
        SERVICES
     ========================================================= */
 
-
     .services-list {
+
       display: grid;
+
     }
 
 
@@ -643,9 +779,14 @@
 
       align-items: center;
 
-      padding: 22px 12px;
+      padding:
+        22px
+        12px;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px
+        solid
+        var(--line);
 
       transition:
         background 0.3s ease,
@@ -656,7 +797,12 @@
 
 
     .service-row:last-child {
-      border-bottom: 1px solid var(--line);
+
+      border-bottom:
+        1px
+        solid
+        var(--line);
+
     }
 
 
@@ -665,6 +811,7 @@
       background: var(--hover);
 
       padding-left: 20px;
+
       padding-right: 20px;
 
     }
@@ -672,7 +819,9 @@
 
     .service-number {
 
-      font-family: "IBM Plex Mono", monospace;
+      font-family:
+        "IBM Plex Mono",
+        monospace;
 
       font-size: 11px;
 
@@ -681,20 +830,30 @@
 
     .service-name {
 
-      font-size: clamp(30px, 5.5vw, 82px);
+      font-size:
+        clamp(
+          30px,
+          5.5vw,
+          82px
+        );
 
       line-height: 0.95;
 
       letter-spacing: -0.05em;
 
-      transition: transform 0.3s ease;
+      transition:
+        transform
+        0.3s
+        ease;
 
     }
 
 
-    .service-row:hover .service-name {
+    .service-row:hover
+    .service-name {
 
-      transform: translateX(8px);
+      transform:
+        translateX(8px);
 
     }
 
@@ -719,7 +878,9 @@
 
     .service-items {
 
-      font-family: "IBM Plex Mono", monospace;
+      font-family:
+        "IBM Plex Mono",
+        monospace;
 
       font-size: 10px;
 
@@ -736,7 +897,6 @@
        ABOUT
     ========================================================= */
 
-
     .about-grid {
 
       display: grid;
@@ -752,7 +912,9 @@
 
     .about-label {
 
-      font-family: "IBM Plex Mono", monospace;
+      font-family:
+        "IBM Plex Mono",
+        monospace;
 
       font-size: 12px;
 
@@ -765,7 +927,12 @@
 
       max-width: 1200px;
 
-      font-size: clamp(30px, 4.8vw, 72px);
+      font-size:
+        clamp(
+          30px,
+          4.8vw,
+          72px
+        );
 
       line-height: 1.02;
 
@@ -791,7 +958,6 @@
        CONTACT
     ========================================================= */
 
-
     .contact {
 
       min-height: 72vh;
@@ -809,7 +975,12 @@
 
       max-width: 1400px;
 
-      font-size: clamp(66px, 12vw, 190px);
+      font-size:
+        clamp(
+          66px,
+          12vw,
+          190px
+        );
 
       font-weight: 600;
 
@@ -841,7 +1012,14 @@
 
       align-items: center;
 
-      font-size: clamp(24px, 4vw, 60px);
+      gap: 12px;
+
+      font-size:
+        clamp(
+          24px,
+          4vw,
+          60px
+        );
 
       letter-spacing: -0.04em;
 
@@ -856,58 +1034,51 @@
 
       opacity: 0.5;
 
-      transform: translateX(5px);
+      transform:
+        translateX(5px);
 
     }
 
 
-    /* SMALL CLEAN EMAIL ARROW */
-
+    /* CLEAN SVG ARROW */
 
     .email-arrow {
 
-      position: relative;
+      width: 18px;
 
-      display: inline-block;
+      height: 18px;
 
-      flex: 0 0 auto;
+      flex:
+        0
+        0
+        auto;
 
-      width: 16px;
-      height: 16px;
-
-      margin-left: 12px;
-
-      border-top: 2px solid currentColor;
-
-      border-right: 2px solid currentColor;
+      transform:
+        translateY(-0.28em);
 
     }
 
 
-    .email-arrow::after {
+    .email-arrow path {
 
-      content: "";
+      fill: none;
 
-      position: absolute;
+      stroke: currentColor;
 
-      width: 21px;
-      height: 2px;
+      stroke-width: 1.6;
 
-      top: 6px;
-      right: -3px;
+      stroke-linecap: square;
 
-      background: currentColor;
-
-      transform: rotate(-45deg);
-
-      transform-origin: right center;
+      stroke-linejoin: miter;
 
     }
 
 
     .contact-note {
 
-      font-family: "IBM Plex Mono", monospace;
+      font-family:
+        "IBM Plex Mono",
+        monospace;
 
       font-size: 11px;
 
@@ -924,7 +1095,6 @@
        FOOTER
     ========================================================= */
 
-
     footer {
 
       display: grid;
@@ -936,11 +1106,19 @@
 
       gap: 20px;
 
-      padding: 14px 0 4px;
+      padding:
+        14px
+        0
+        4px;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px
+        solid
+        var(--line);
 
-      font-family: "IBM Plex Mono", monospace;
+      font-family:
+        "IBM Plex Mono",
+        monospace;
 
       font-size: 11px;
 
@@ -955,16 +1133,21 @@
        SCROLL REVEAL
     ========================================================= */
 
-
     .fade {
 
       opacity: 0;
 
-      transform: translateY(20px);
+      transform:
+        translateY(20px);
 
       transition:
-        opacity 0.7s cubic-bezier(.22,.75,.25,1),
-        transform 0.7s cubic-bezier(.22,.75,.25,1);
+        opacity
+        0.7s
+        cubic-bezier(.22,.75,.25,1),
+
+        transform
+        0.7s
+        cubic-bezier(.22,.75,.25,1);
 
     }
 
@@ -973,7 +1156,8 @@
 
       opacity: 1;
 
-      transform: translateY(0);
+      transform:
+        translateY(0);
 
     }
 
@@ -982,17 +1166,21 @@
        MOBILE
     ========================================================= */
 
-
-    @media (max-width: 850px) {
+    @media
+    (max-width: 850px) {
 
 
       :root {
+
         --page-padding: 14px;
+
       }
 
 
       html {
+
         scroll-padding-top: 65px;
+
       }
 
 
@@ -1005,15 +1193,28 @@
       }
 
 
+      .brand {
+
+        font-size: 17px;
+
+      }
+
+
       nav {
+
         gap: 11px;
+
       }
 
 
       nav a::after {
+
         display: none;
+
       }
 
+
+      /* HERO */
 
       .hero {
 
@@ -1026,7 +1227,12 @@
 
       .hero-title {
 
-        font-size: clamp(64px, 21vw, 130px);
+        font-size:
+          clamp(
+            64px,
+            21vw,
+            130px
+          );
 
         line-height: 0.79;
 
@@ -1053,22 +1259,36 @@
 
       .hero-bottom {
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+          1fr
+          1fr;
 
-        gap: 18px 12px;
+        gap:
+          18px
+          12px;
 
       }
 
 
       .status {
+
         white-space: normal;
+
       }
 
+
+      /* SECTIONS */
 
       section {
-        padding: 50px 0;
+
+        padding:
+          50px
+          0;
+
       }
 
+
+      /* WORK */
 
       .project-media {
 
@@ -1081,7 +1301,8 @@
 
       .project-meta {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
 
         gap: 4px;
 
@@ -1089,14 +1310,20 @@
 
 
       .view-cursor {
+
         display: none;
+
       }
 
 
       .project-media.cursor-active {
+
         cursor: auto;
+
       }
 
+
+      /* SERVICES */
 
       .service-row {
 
@@ -1118,13 +1345,17 @@
         background: transparent;
 
         padding-left: 0;
+
         padding-right: 0;
 
       }
 
 
-      .service-row:hover .service-name {
+      .service-row:hover
+      .service-name {
+
         transform: none;
+
       }
 
 
@@ -1137,14 +1368,19 @@
       }
 
 
+      /* ABOUT */
+
       .about-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
 
         gap: 24px;
 
       }
 
+
+      /* CONTACT */
 
       .contact {
 
@@ -1164,7 +1400,14 @@
 
       .contact-email {
 
-        font-size: clamp(25px, 7.3vw, 42px);
+        gap: 8px;
+
+        font-size:
+          clamp(
+            24px,
+            7.1vw,
+            42px
+          );
 
         letter-spacing: -0.05em;
 
@@ -1174,35 +1417,35 @@
       .email-arrow {
 
         width: 11px;
+
         height: 11px;
 
-        margin-left: 8px;
-
-        border-top-width: 1.5px;
-        border-right-width: 1.5px;
+        transform:
+          translateY(-0.25em);
 
       }
 
 
-      .email-arrow::after {
+      .email-arrow path {
 
-        width: 15px;
-        height: 1.5px;
-
-        top: 4px;
-        right: -2px;
+        stroke-width: 1.4;
 
       }
 
 
       .contact-note {
+
         text-align: left;
+
       }
 
 
+      /* FOOTER */
+
       footer {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
 
         gap: 6px;
 
@@ -1215,8 +1458,8 @@
        SMALL MOBILE
     ========================================================= */
 
-
-    @media (max-width: 520px) {
+    @media
+    (max-width: 520px) {
 
 
       header {
@@ -1244,7 +1487,8 @@
 
       .hero-bottom {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
 
         gap: 13px;
 
@@ -1253,10 +1497,14 @@
 
       .contact-title {
 
-        font-size: clamp(60px, 20vw, 100px);
+        font-size:
+          clamp(
+            60px,
+            20vw,
+            100px
+          );
 
       }
-
 
     }
 
@@ -1265,12 +1513,14 @@
        REDUCED MOTION
     ========================================================= */
 
-
-    @media (prefers-reduced-motion: reduce) {
+    @media
+    (prefers-reduced-motion: reduce) {
 
 
       html {
+
         scroll-behavior: auto;
+
       }
 
 
@@ -1278,11 +1528,17 @@
       *::before,
       *::after {
 
-        animation-duration: 0.01ms !important;
+        animation-duration:
+          0.01ms
+          !important;
 
-        animation-iteration-count: 1 !important;
+        animation-iteration-count:
+          1
+          !important;
 
-        transition-duration: 0.01ms !important;
+        transition-duration:
+          0.01ms
+          !important;
 
       }
 
@@ -1296,8 +1552,9 @@
 <body>
 
 
-  <!-- PROJECT CURSOR -->
-
+  <!-- ========================================================
+       PROJECT CURSOR
+  ========================================================= -->
 
   <div
     class="view-cursor"
@@ -1307,9 +1564,9 @@
   </div>
 
 
-
-  <!-- HEADER -->
-
+  <!-- ========================================================
+       HEADER
+  ========================================================= -->
 
   <header>
 
@@ -1317,8 +1574,9 @@
     <a
       href="#top"
       class="brand"
+      aria-label="Working Copy — back to top"
     >
-      Working Copy
+      W/C
     </a>
 
 
@@ -1346,7 +1604,6 @@
   </header>
 
 
-
   <main id="top">
 
 
@@ -1354,22 +1611,27 @@
          HERO
     ======================================================= -->
 
-
     <section class="hero">
 
 
       <h1 class="hero-title">
 
+
         <span class="hero-working">
+
           Working
+
         </span>
+
 
         <span class="hero-copy">
+
           Copy
+
         </span>
 
-      </h1>
 
+      </h1>
 
 
       <div class="hero-bottom">
@@ -1377,55 +1639,77 @@
 
         <div>
 
+
           <div class="label">
+
             Studio
+
           </div>
+
 
           Independent graphic design studio.
 
-        </div>
 
+        </div>
 
 
         <div>
 
+
           <div class="label">
+
             Based
+
           </div>
+
 
           Folkestone, UK
 
-        </div>
 
+        </div>
 
 
         <div>
 
+
           <div class="label">
+
             Working across
+
           </div>
+
 
           Identities, campaigns, events and visual communication.
 
-        </div>
 
+        </div>
 
 
         <div class="status">
 
+
           <div class="label">
+
             Status
+
           </div>
+
 
           <div class="status-line">
 
+
             <span class="status-dot"></span>
 
+
             <span>
+
               Accepting new projects
+
             </span>
 
+
           </div>
+
 
         </div>
 
@@ -1436,27 +1720,31 @@
     </section>
 
 
-
     <!-- ======================================================
          WORK
     ======================================================= -->
-
 
     <section id="work">
 
 
       <div class="section-head">
 
-        <span>
-          Selected Work
-        </span>
 
         <span>
-          01—03
+
+          Selected Work
+
         </span>
+
+
+        <span>
+
+          01—03
+
+        </span>
+
 
       </div>
-
 
 
       <div class="work-grid">
@@ -1464,68 +1752,93 @@
 
         <!-- PROJECT 01 -->
 
-
         <article class="project fade">
 
 
           <div class="project-media">
 
+
             <div class="project-placeholder">
+
               Project 01
+
             </div>
+
 
           </div>
 
 
           <div class="project-meta">
 
+
             <span>
+
               Project Name
+
             </span>
 
+
             <span>
+
               Brand Identity
+
             </span>
 
+
             <span>
+
               2026
+
             </span>
+
 
           </div>
 
 
         </article>
-
 
 
         <!-- PROJECT 02 -->
 
-
         <article class="project fade">
 
 
           <div class="project-media">
 
+
             <div class="project-placeholder">
+
               Project 02
+
             </div>
+
 
           </div>
 
 
           <div class="project-meta">
 
+
             <span>
+
               Project Name
+
             </span>
 
+
             <span>
+
               Campaign / Event
+
             </span>
 
+
             <span>
+
               2026
+
             </span>
+
 
           </div>
 
@@ -1533,35 +1846,47 @@
         </article>
 
 
-
         <!-- PROJECT 03 -->
-
 
         <article class="project fade">
 
 
           <div class="project-media">
 
+
             <div class="project-placeholder">
+
               Project 03
+
             </div>
+
 
           </div>
 
 
           <div class="project-meta">
 
+
             <span>
+
               Project Name
+
             </span>
 
+
             <span>
+
               Graphic Design
+
             </span>
 
+
             <span>
+
               2026
+
             </span>
+
 
           </div>
 
@@ -1575,27 +1900,31 @@
     </section>
 
 
-
     <!-- ======================================================
          SERVICES
     ======================================================= -->
-
 
     <section id="services">
 
 
       <div class="section-head">
 
-        <span>
-          Services
-        </span>
 
         <span>
-          What we do
+
+          Services
+
         </span>
+
+
+        <span>
+
+          What we do
+
+        </span>
+
 
       </div>
-
 
 
       <div class="services-list">
@@ -1603,17 +1932,20 @@
 
         <!-- SERVICE 01 -->
 
-
         <div class="service-row fade">
 
 
           <span class="service-number">
+
             01
+
           </span>
 
 
           <div class="service-name">
+
             Brand Identity
+
           </div>
 
 
@@ -1622,8 +1954,8 @@
 
             <div class="service-note">
 
-              Visual identities and systems built to give businesses a clear,
-              distinctive and usable presence.
+              Visual identities and systems built to give businesses
+              a clear, distinctive and usable presence.
 
             </div>
 
@@ -1642,20 +1974,22 @@
         </div>
 
 
-
         <!-- SERVICE 02 -->
-
 
         <div class="service-row fade">
 
 
           <span class="service-number">
+
             02
+
           </span>
 
 
           <div class="service-name">
+
             Campaigns & Events
+
           </div>
 
 
@@ -1684,20 +2018,22 @@
         </div>
 
 
-
         <!-- SERVICE 03 -->
-
 
         <div class="service-row fade">
 
 
           <span class="service-number">
+
             03
+
           </span>
 
 
           <div class="service-name">
+
             Design Partnerships
+
           </div>
 
 
@@ -1706,8 +2042,8 @@
 
             <div class="service-note">
 
-              Ongoing creative support for organisations that need consistent,
-              reliable design without building an internal studio.
+              Ongoing creative support for organisations that need
+              consistent, reliable design without building an internal studio.
 
             </div>
 
@@ -1732,11 +2068,9 @@
     </section>
 
 
-
     <!-- ======================================================
          ABOUT
     ======================================================= -->
-
 
     <section id="about">
 
@@ -1745,9 +2079,10 @@
 
 
         <div class="about-label">
-          About
-        </div>
 
+          About
+
+        </div>
 
 
         <div>
@@ -1763,9 +2098,9 @@
 
           <p class="about-small fade">
 
-            An independent graphic design studio based in Folkestone, working
-            directly with clients to create clear, distinctive visual
-            communication across brand, print and digital.
+            An independent graphic design studio based in Folkestone,
+            working directly with clients to create clear, distinctive
+            visual communication across brand, print and digital.
 
           </p>
 
@@ -1779,11 +2114,9 @@
     </section>
 
 
-
     <!-- ======================================================
          CONTACT
     ======================================================= -->
-
 
     <section
       id="contact"
@@ -1799,7 +2132,6 @@
       </h2>
 
 
-
       <div class="contact-bottom">
 
 
@@ -1808,17 +2140,28 @@
           href="mailto:hello@workingcopy.studio"
         >
 
+
           <span>
+
             hello@workingcopy.studio
+
           </span>
 
-          <span
+
+          <svg
             class="email-arrow"
+            viewBox="0 0 18 18"
             aria-hidden="true"
-          ></span>
+          >
+
+            <path
+              d="M4 14L14 4M6 4H14V12"
+            />
+
+          </svg>
+
 
         </a>
-
 
 
         <div class="contact-note">
@@ -1837,33 +2180,40 @@
   </main>
 
 
-
   <!-- ========================================================
        FOOTER
   ========================================================= -->
-
 
   <footer>
 
 
     <span>
+
       Working Copy © 2026
+
     </span>
 
 
     <span>
+
       Independent Graphic Design Studio
+
     </span>
 
 
     <span>
+
       workingcopy.studio
+
     </span>
 
 
   </footer>
 
 
+  <!-- ========================================================
+       JAVASCRIPT
+  ========================================================= -->
 
   <script>
 
@@ -1871,7 +2221,6 @@
     /* =========================================================
        SCROLL REVEAL
     ========================================================= */
-
 
     const fadeItems =
       document.querySelectorAll(".fade");
@@ -1882,25 +2231,34 @@
 
         entries => {
 
+
           entries.forEach(entry => {
 
+
             if (entry.isIntersecting) {
+
 
               entry.target
                 .classList
                 .add("visible");
 
+
               fadeObserver
                 .unobserve(entry.target);
 
+
             }
 
+
           });
+
 
         },
 
         {
+
           threshold: 0.12
+
         }
 
       );
@@ -1908,16 +2266,16 @@
 
     fadeItems.forEach(item => {
 
+
       fadeObserver.observe(item);
 
-    });
 
+    });
 
 
     /* =========================================================
        PROJECT VIEW CURSOR
     ========================================================= */
-
 
     const viewCursor =
       document.getElementById("viewCursor");
@@ -1934,17 +2292,22 @@
         "mouseenter",
         () => {
 
+
           if (window.innerWidth > 850) {
+
 
             viewCursor
               .classList
               .add("visible");
 
+
             project
               .classList
               .add("cursor-active");
 
+
           }
+
 
         }
       );
@@ -1954,13 +2317,16 @@
         "mouseleave",
         () => {
 
+
           viewCursor
             .classList
             .remove("visible");
 
+
           project
             .classList
             .remove("cursor-active");
+
 
         }
       );
@@ -1970,11 +2336,14 @@
         "mousemove",
         event => {
 
+
           viewCursor.style.left =
             `${event.clientX}px`;
 
+
           viewCursor.style.top =
             `${event.clientY}px`;
+
 
         }
       );
@@ -1983,11 +2352,9 @@
     });
 
 
-
     /* =========================================================
        ACTIVE NAVIGATION
     ========================================================= */
-
 
     const sections =
       document.querySelectorAll(
@@ -2004,14 +2371,18 @@
 
         entries => {
 
+
           entries.forEach(entry => {
+
 
             if (entry.isIntersecting) {
 
 
               navLinks.forEach(link => {
 
+
                 link.classList.remove("active");
+
 
               });
 
@@ -2024,15 +2395,20 @@
 
               if (activeLink) {
 
+
                 activeLink
                   .classList
                   .add("active");
 
+
               }
+
 
             }
 
+
           });
+
 
         },
 
@@ -2050,10 +2426,11 @@
 
     sections.forEach(section => {
 
+
       navObserver.observe(section);
 
-    });
 
+    });
 
 
   </script>
