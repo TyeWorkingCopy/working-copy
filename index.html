@@ -68,37 +68,44 @@
       gap: 20px;
     }
 
-    .hero {
-      min-height: 78vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 28px 0 24px;
-    }
+   .hero {
+  min-height: 84vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 22px 0 20px;
+}
 
-    .hero-title {
-      font-size: clamp(72px, 15vw, 240px);
-      line-height: 0.78;
-      letter-spacing: -0.08em;
-      font-weight: 700;
-      text-transform: uppercase;
-      word-break: break-word;
-    }
+.hero-title {
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  font-size: clamp(76px, 14vw, 220px);
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
-    .hero-bottom {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 20px;
-      align-items: end;
-      font-size: 14px;
-      line-height: 1.35;
-    }
+.hero-title span:last-child {
+  text-align: right;
+}
 
-    .hero-bottom .label {
-      text-transform: uppercase;
-      font-size: 11px;
-      margin-bottom: 6px;
-    }
+.hero-bottom {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.2fr;
+  gap: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.hero-bottom .label {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
 
     section {
       border-top: 1px solid var(--line);
@@ -288,7 +295,14 @@ footer,
       .hero {
         min-height: 72vh;
       }
+.hero-title {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
 
+.hero-title span:last-child {
+  text-align: left;
+}
       .hero-bottom {
         grid-template-columns: 1fr;
         gap: 14px;
@@ -351,9 +365,10 @@ footer,
   <main>
 
     <section class="hero">
-      <h1 class="hero-title">
-        Working<br>Copy
-      </h1>
+     <h1 class="hero-title">
+  <span>Working</span>
+  <span>Copy</span>
+</h1>
 
       <div class="hero-bottom">
         <div>
